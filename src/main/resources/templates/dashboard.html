@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<h1>Fees</h1>
+<table border="1">
+    <tr>
+        <th>Student</th>
+        <th>Amount</th>
+        <th>Due</th>
+        <th>Paid</th>
+    </tr>
+    <tr th:each="fee : ${fees}">
+        <td th:text="${fee.student.name}"></td>
+        <td th:text="${fee.amount}"></td>
+        <td th:text="${fee.dueDate}"></td>
+        <td th:text="${fee.paid}"></td>
+    </tr>
+</table>
+</body>
+</html>
